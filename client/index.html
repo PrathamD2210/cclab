@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google OAuth2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #FFD700, #FF6347, #00BFFF);
+            /* Gradient background with multiple colors */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #000000;
+            /* Black text color */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #000000;
+            /* Black text color */
+            font-weight: bold;
+        }
+
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 50px;
+            /* Circular border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 15px;
+            color: #000000;
+            /* Black text color */
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Google OAuth2</h1>
+    <a href="/auth/google">Login with Google</a>
+
+    <div class="form-container">
+        <h2 class="login">Login</h2>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="name">Name </label>
+                <input type="text" id="name" name="username" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="password">Password </label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p>Don't have an account <a href="/signup">Signup</a></p>
+    </div>
+</body>
+
+</html>
